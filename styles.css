@@ -1,0 +1,199 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: white;
+  overflow-x: hidden;
+}
+
+
+#tsparticles {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+header h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.lead {
+  color: #ffffff;
+}
+
+.highlight {
+  color: #00ffe0;
+  font-weight: bold;
+}
+
+.tech-icon {
+  font-size: 60px;
+  transition: transform 0.3s ease;
+}
+
+.tech-icon:hover {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.btn-glow {
+  padding: 12px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(90deg, #ff6ec4, #7873f5, #4ade80); /* cores vivas */
+  background-size: 300% 100%;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 110, 196, 0.5);
+  transition: all 0.4s ease-in-out;
+  animation: glowing 6s linear infinite;
+}
+
+.btn-glow:hover {
+  background-position: 100% 0;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+
+@keyframes glowing {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.robo-container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 120px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.robo-css {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 50px;
+  height: 100px;
+  animation: walk 12s linear infinite alternate;
+}
+
+.robo-css .head {
+  width: 50px;
+  height: 30px;
+  background: #ff6f61;
+  border-radius: 10px 10px 0 0;
+  position: relative;
+  border: 2px solid #d64541;
+}
+
+.robo-css .eye {
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 8px;
+  animation: blink 3s infinite;
+}
+
+.robo-css .eye.left {
+  left: 10px;
+}
+
+.robo-css .eye.right {
+  right: 10px;
+}
+
+@keyframes blink {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(0.2); }
+}
+
+.robo-css .body {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  background: #ff6f61;
+  border-radius: 5px;
+  border: 2px solid #d64541;
+  position: relative;
+}
+
+.robo-css .arm {
+  width: 10px;
+  height: 30px;
+  background: #f7cac9;
+  position: absolute;
+  top: 3px;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.robo-css .arm.left {
+  left: -12px;
+  transform: rotate(20deg);
+}
+
+.robo-css .arm.right {
+  right: -12px;
+  transform: rotate(-20deg);
+}
+
+.robo-css .legs {
+  width: 37px;
+  height: 20px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.robo-css .leg1,
+.robo-css .leg2 {
+  width: 18px;
+  height: 100%;
+  border-radius: 0 0 5px 5px;
+  background: #ff6f61;
+  border: 2px solid #d64541;
+}
+
+
+@keyframes walk {
+  0% { left: -60px; }
+  100% { left: calc(100% + 60px); }
+}
+.tech-icon {
+  font-size: 60px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  animation: float 4s ease-in-out infinite;
+}
+
+.tech-icon:hover {
+  transform: scale(1.2) rotate(5deg);
+  filter: drop-shadow(0 0 10px #ffffff);
+}
+
+@keyframes float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+p.fs-5 {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: left;
+  color: #e0e0e0;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
